@@ -18,11 +18,11 @@ public class Nqueen
      }
      for(int col=0;col< chess.length;col++)  // loop on col because it is optional(means 0th row have two option either goto 0col or 1 col)
        {
-         if(isQueenIsatSafeplace(chess,row,col)==true)  // this function will check is this index is safe if we place our queen here it will not die
+         if(isQueenIsatSafeplace(chess,row,col)==true)  // this function will check is this index is safe if we place our queen here it Should not die.
           {
              chess[row][col] = 1;  // then when it has been checked it will place by makeing it 1
              printnqueen(chess, ans + row + "-" + col + ",", row + 1);  //recursion called for checking every block of chess board
-             chess[row][col] = 0;    //if we have placed and then we have toh backtrack then removed the placed queen by makeing it 0
+             chess[row][col] = 0;    //if we have placed and then we have to backtrack then removed the placed queen by makeing it 0
           }
        }
     }
